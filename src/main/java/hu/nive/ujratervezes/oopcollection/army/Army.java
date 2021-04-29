@@ -11,11 +11,13 @@ public class Army {
     }
 
     public void damageAll(int damage) {
+        List<MilitaryUnit> casualties = new ArrayList<>();
         for (int i = 0; i < army.size(); i++) {
             MilitaryUnit unit = army.get(i);
             unit.sufferDamage(damage);
-            if (unit.getHitPoints() <= 25) army.remove(unit);
+            if (unit.getHitPoints() <= 25) casualties.add(unit);
         }
+        army.removeAll(casualties);
     }
 
     public int getArmyDamage() {
