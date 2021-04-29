@@ -1,7 +1,6 @@
 package hu.nive.ujratervezes.oopcollection.army;
 
 public class Swordsman extends MilitaryUnit {
-
     private boolean hasShield = true;
 
     Swordsman(boolean isArmoured) {
@@ -16,6 +15,4 @@ public class Swordsman extends MilitaryUnit {
         }
         super.sufferDamage(damage);
     }
-
-
 }

@@ -19,8 +19,7 @@ public abstract class MilitaryUnit {
         return this.damage;
     }
     public void sufferDamage(int damage){
-        int damageCaused = (isArmoured) ? damage/2 : damage;
+        int damageCaused = (isArmoured) ? damage / 2 : damage;
         this.hitPoints -= damageCaused;
     }
-
 }

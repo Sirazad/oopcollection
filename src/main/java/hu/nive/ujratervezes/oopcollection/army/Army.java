@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Army {
-
     private List<MilitaryUnit> army = new ArrayList<>();
 
     public void addUnit(MilitaryUnit militaryUnit) {
@@ -19,8 +18,7 @@ public class Army {
     }
 
     public int getArmyDamage() {
-        //TODO visszaadja, hogy az aktuális támadással mennyi sebzést okoz a sereg összesen
-        return 0;
+        return army.stream().mapToInt(unit -> unit.doDamage()).reduce(0, Integer::sum);
     }
 
     public int getArmySize() {
