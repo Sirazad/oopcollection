@@ -8,12 +8,13 @@ public class Swordsman extends MilitaryUnit {
         super(100, 10, isArmoured);
     }
 
-    public boolean isHasShield() {
-        return hasShield;
-    }
-
-    public void setHasShield(boolean hasShield) {
-        this.hasShield = hasShield;
+    @Override
+    public void sufferDamage(int damage){
+        if (hasShield) {
+            damage = 0;
+            hasShield = false;
+        }
+        super.sufferDamage(damage);
     }
 
 

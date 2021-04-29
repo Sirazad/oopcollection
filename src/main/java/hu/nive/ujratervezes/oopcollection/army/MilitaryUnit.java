@@ -3,9 +3,7 @@ package hu.nive.ujratervezes.oopcollection.army;
 public abstract class MilitaryUnit {
     private int hitPoints;
     private int damage;
-    private boolean isArmoured = false;
-
-    MilitaryUnit(){}
+    private boolean isArmoured;
 
     MilitaryUnit(int hitPoints, int damage, boolean isArmoured){
         this.hitPoints = hitPoints;
@@ -16,15 +14,6 @@ public abstract class MilitaryUnit {
     public int getHitPoints() {
         return hitPoints;
     }
-
-    public boolean isArmoured() {
-        return isArmoured;
-    }
-
-    public void setArmoured(boolean armoured) {
-        isArmoured = armoured;
-    }
-
 
     public int doDamage() {
         return this.damage;
