@@ -24,6 +24,6 @@ public class Army {
     }
 
     public int getArmySize() {
-        return army.size()+1;
+        return army.size();
     }
 }
