@@ -11,7 +11,8 @@ public class Army {
     }
 
     public void damageAll(int damage) {
-        for (MilitaryUnit unit : army) {
+        for (int i = 0; i < army.size(); i++) {
+            MilitaryUnit unit = army.get(i);
             unit.sufferDamage(damage);
             if (unit.getHitPoints() <= 25) army.remove(unit);
         }
